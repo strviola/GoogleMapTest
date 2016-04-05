@@ -1,0 +1,21 @@
+p#notice = notice
+
+p
+  strong Name:
+  = @station.name
+p
+  strong Route:
+  = @station.route
+p
+  strong Address:
+  = @station.address
+p
+  strong Latitude:
+  = @station.latitude
+p
+  strong Longtitude:
+  = @station.longtitude
+
+= link_to 'Edit', edit_station_path(@station)
+'|
+= link_to 'Back', stations_path

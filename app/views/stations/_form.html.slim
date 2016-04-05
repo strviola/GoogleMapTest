@@ -1,0 +1,24 @@
+= form_for @station do |f|
+  - if @station.errors.any?
+    #error_explanation
+      h2 = "#{pluralize(@station.errors.count, "error")} prohibited this station from being saved:"
+      ul
+        - @station.errors.full_messages.each do |message|
+          li = message
+
+  .field
+    = f.label :name
+    = f.text_field :name
+  .field
+    = f.label :route
+    = f.text_field :route
+  .field
+    = f.label :address
+    = f.text_field :address
+  .field
+    = f.label :latitude
+    = f.text_field :latitude
+  .field
+    = f.label :longtitude
+    = f.text_field :longtitude
+  .actions = f.submit
